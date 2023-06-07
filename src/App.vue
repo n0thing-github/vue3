@@ -7,9 +7,16 @@ import HelloWorld from '@/components/HelloWorld.vue'
 <template>
   <!-- 一级路由出口组件 -->
   <RouterView />
+  <div class="test">
+    test scss
+  </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+// @import '@/styles/var.scss';  因为已经在 vite.config.js 配置了自动导入 所以不用手动导入
+.test{
+  color: $priceColor;
+}
 header {
   line-height: 1.5;
   max-height: 100vh;
